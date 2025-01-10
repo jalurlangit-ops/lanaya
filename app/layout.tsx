@@ -47,6 +47,22 @@ function rank() {
     };
   }
 
+  function histats() {
+    return {
+      __html: `
+        var _Hasync= _Hasync|| [];
+        _Hasync.push(['Histats.start', '1,4920979,4,1,120,40,00010000']);
+        _Hasync.push(['Histats.fasi', '1']);
+        _Hasync.push(['Histats.track_hits', '']);
+        (function() {
+        var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+        hs.src = ('//s10.histats.com/js15_as.js');
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+        })();
+      `,
+    };
+  };
+
 export default function RootLayout({
   children
 }: Readonly<{
@@ -97,6 +113,7 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="next-size-adjust" content="" />
         <script type="application/ld+json" dangerouslySetInnerHTML={rank()} key="product-jsonld" />
+        <script dangerouslySetInnerHTML={histats()} type="text/javascript" />
       </head>
       <body className={`${inter.variable} antialiased`}>{children}</body>
     </html>
