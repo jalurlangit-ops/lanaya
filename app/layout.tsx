@@ -1,9 +1,8 @@
 'use client';
 
 import { Inter } from 'next/font/google';
+import GlobalConst from "./var-global";
 import './globals.css';
-
-const nameDomain = "https://camnangphaidep.com";
 
 const inter = Inter({
   variable: '--font-inter',
@@ -15,13 +14,13 @@ function rank() {
       __html: `{
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    "name": "https://camnangphaidep.com",
+    "name": '${GlobalConst.domain}',
     "operatingSystem": "ANDROID",
     "applicationCategory": "GameApplication",
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "5",
-      "ratingCount": "7143729"
+      "ratingCount": "8142921"
     },
 	"review": {
           "@type": "Review",
@@ -33,8 +32,8 @@ function rank() {
           },
 	"author": {
             "@type": "Person",
-            "name": "Lanaya88 Agen Slot Online Terpercaya, Bandar Judi Slot Maxwin 2025",
-            "reviewBody": "Lanaya88 agen slot Online terpercaya, bandar judi slot maxwin 2025, menawarkan pengalaman bermain slot gacor terbaik dengan keamanan terjamin. Nikmati pasaran Toto hongkong lotto lengkap dengan peluang menang tinggi, serta transaksi yang cepat dan aman. Menangkan hadiah besar di situs terpercaya ini!"
+            "name": '${GlobalConst.title}',
+            "reviewBody": '${GlobalConst.desc}'
           }
         },
     "offers": {
@@ -47,11 +46,11 @@ function rank() {
     };
   }
 
-  function histats() {
+function histats() {
     return {
       __html: `
         var _Hasync= _Hasync|| [];
-        _Hasync.push(['Histats.start', '1,4920979,4,1,120,40,00010000']);
+        _Hasync.push(['Histats.start', '${GlobalConst.histats}']);
         _Hasync.push(['Histats.fasi', '1']);
         _Hasync.push(['Histats.track_hits', '']);
         (function() {
@@ -71,16 +70,16 @@ export default function RootLayout({
   return (
     <html lang="id" data-browser="chrome">
       <head>
-        <title>Lanaya88 Agen Slot Online Terpercaya, Bandar Judi Slot Maxwin 2025</title>
-        <meta name="description" content="Lanaya88 agen slot Online terpercaya, bandar judi slot maxwin 2025, menawarkan pengalaman bermain slot gacor terbaik dengan keamanan terjamin. Nikmati pasaran Toto hongkong lotto lengkap dengan peluang menang tinggi, serta transaksi yang cepat dan aman. Menangkan hadiah besar di situs terpercaya ini!" />
-        <meta name="keywords" content="Lanaya88 agen slot Online terpercaya, bandar judi slot maxwin 2025, menawarkan pengalaman bermain slot gacor terbaik dengan keamanan terjamin. Nikmati pasaran Toto hongkong lotto lengkap dengan peluang menang tinggi, serta transaksi yang cepat dan aman. Menangkan hadiah besar di situs terpercaya ini!" />
-        <meta name="google-site-verification" content="sM-yorNjm-m6rVWdLaRC0diwsfkRNhA9P5wrlb5k0QQ" />
-        <meta name="application-name" content="Lanaya88" />
-        <link rel="author" href={nameDomain} />
-        <link rel="canonical" href={nameDomain} />
-        <meta name="author" content="Lanaya88" />
-        <meta name="publisher" content="Lanaya88" />
-        <meta name="copyright" content="Lanaya88" />
+        <title>{GlobalConst.title}</title>
+        <meta name="description" content={GlobalConst.desc} />
+        <meta name="keywords" content={GlobalConst.keywords} />
+        <meta name="google-site-verification" content={GlobalConst.gsc} />
+        <meta name="application-name" content={GlobalConst.brandName} />
+        <link rel="author" href={GlobalConst.domain} />
+        <link rel="canonical" href={GlobalConst.domain} />
+        <meta name="author" content={GlobalConst.brandName} />
+        <meta name="publisher" content={GlobalConst.brandName} />
+        <meta name="copyright" content={GlobalConst.brandName} />
         <meta name="robots" content="index, follow" />
         <meta name="googlebot" content="index, follow" />
         <meta name="category" content="slot" />
@@ -94,20 +93,20 @@ export default function RootLayout({
         <meta name="MobileOptimized" content="width" />
         <meta name="distribution" content="global" />
         <meta name="format-detection" content="telephone=no, address=no, email=no" />
-        <meta property="og:title" content="Lanaya88 Agen Slot Online Terpercaya, Bandar Judi Slot Maxwin 2025" />
-        <meta property="og:description" content="Lanaya88 agen slot Online terpercaya, bandar judi slot maxwin 2025, menawarkan pengalaman bermain slot gacor terbaik dengan keamanan terjamin. Nikmati pasaran Toto hongkong lotto lengkap dengan peluang menang tinggi, serta transaksi yang cepat dan aman. Menangkan hadiah besar di situs terpercaya ini!" />
-        <meta property="og:url" content={nameDomain} />
-        <meta property="og:site_name" content="Lanaya88" />
+        <meta property="og:title" content={GlobalConst.title} />
+        <meta property="og:description" content={GlobalConst.desc} />
+        <meta property="og:url" content={GlobalConst.domain} />
+        <meta property="og:site_name" content={GlobalConst.brandName} />
         <meta property="og:locale" content="id_ID" />
-        <meta property="og:image" content={nameDomain} />
+        <meta property="og:image" content={GlobalConst.domain} />
         <meta property="og:image:width" content="840" />
         <meta property="og:image:height" content="480" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:creator" content="Lanaya88" />
-        <meta name="twitter:title" content="Lanaya88 Agen Slot Online Terpercaya, Bandar Judi Slot Maxwin 2025" />
-        <meta name="twitter:description" content="Lanaya88 agen slot Online terpercaya, bandar judi slot maxwin 2025, menawarkan pengalaman bermain slot gacor terbaik dengan keamanan terjamin. Nikmati pasaran Toto hongkong lotto lengkap dengan peluang menang tinggi, serta transaksi yang cepat dan aman. Menangkan hadiah besar di situs terpercaya ini!" />
-        <meta name="twitter:image" content={nameDomain} />
+        <meta name="twitter:creator" content={GlobalConst.brandName} />
+        <meta name="twitter:title" content={GlobalConst.title} />
+        <meta name="twitter:description" content={GlobalConst.desc} />
+        <meta name="twitter:image" content={GlobalConst.domain} />
         <link rel="icon" href="/favicon.ico?favicon.088e6c96.ico" sizes="256x256" type="image/x-icon" />
         <meta name="next-size-adjust" content="" />
         <script type="application/ld+json" dangerouslySetInnerHTML={rank()} key="product-jsonld" />
